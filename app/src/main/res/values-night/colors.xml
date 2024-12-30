@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dayText">#FFFFFF</color>
+    <color name="dayBack">#000000</color>
+    <color name="hintText">#CCCCCC</color>
+</resources>

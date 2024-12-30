@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/dayBack">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            >
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:columnCount="4"
+                android:background="#C1D">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/round"
+                    android:textStyle="bold"
+                    android:textColor="#FFF"
+                    android:layout_columnSpan="1"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="2"
+                    android:text="@string/team1"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#FFF"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="2"
+                    android:text="@string/team2"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#FFF"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/_u"
+                    android:textStyle="bold"
+                    android:textColor="#FFF"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="2"
+                    android:layout_gravity="center" />
+            </GridLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tableRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="8dp"
+            >
+
+            <Button
+                android:id="@+id/saveButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="#96D"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="30dp"/>
+
+            <Button
+                android:id="@+id/addRowButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="#D69"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="30dp"/>
+
+            <Button
+                android:id="@+id/clearButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clear"
+                android:backgroundTint="#696"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="#C1D"
+            >
+
+            <TextView
+                android:id="@+id/team1Total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/result1"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="#FFF" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#FFF" />
+
+            <TextView
+                android:id="@+id/team2Total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/result2"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="#FFF" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
